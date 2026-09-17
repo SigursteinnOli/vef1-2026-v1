@@ -1,0 +1,314 @@
+/**
+ * CSS fyrir sýnilausn á verkefni 2.
+ * Heldur einfalt en notar grunn CSS og flexbox.
+ * _Ekki_ skalanlegt.
+ */
+
+/**
+ * Fjarlægja gefið margin og padding af öllu.
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Setja border-box á öll element
+ * => reiknum stærð box sem width + margin
+ * padding + border ekki inní því.
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/**
+ * Hjálpar class sem felur sjónrænt það sem
+ * skjálesarar lesa.
+ */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/** Letur **/
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AtkinsonHyber";
+  src: url("fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/**
+ * Lætur myndir aldrei taka meira pláss en
+ * foreldri skilgreinir.
+ */
+img {
+  max-width: 100%;
+}
+
+/**
+ * Litur á hlekkjum erfist frá foreldri
+ */
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/**
+ * Leturstærð erfist frá foreldri í form elements.
+ */
+input,
+button,
+select {
+  font-size: inherit;
+}
+
+body {
+  /* TODO skilgreiningar á letri, grunnstærð, bakgrunn og lit */
+  font-family: "Inter";
+  font-size: 16px;
+  background-color: #ffeedd;
+  color: #000000;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/** Haus **/
+
+/* TODO skilgreiningar fyrir haus/header */
+header h1 {
+  font-size: 3.25rem;
+  text-align: center;
+}
+
+/** Valmynd **/
+
+/* TODO skilgreining fyrir nav  */
+
+nav {
+  font-family: "AtkinsonHyber";
+  font-size: 1.5rem;
+  background-color: #ffeedd;
+
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  position: sticky;
+  top: 0px;
+  padding-top: 10px;
+  border-bottom: 2px solid #000000;
+}
+
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+nav strong {
+  text-decoration: underline;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/** Meginmál **/
+
+/* TODO almennar skilgreiningar fyrir meginmál */
+
+main {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  gap: 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+  flex: 1;
+}
+
+/** Fótur **/
+footer {
+  background-color: #996644;
+  border-top: 2px solid #000000;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.footerContent {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  gap: 20px;
+}
+
+.footerContent section {
+  text-align: center;
+  flex: 1;
+}
+
+.footerContent ul {
+  list-style: none;
+}
+
+/* TODO skilgreiningar fyrir footer */
+
+/** Flekar / cards á forsíðu **/
+
+.cards section {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.cards img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/* TODO */
+
+/** Textasíða **/
+.um {
+  padding: 20px;
+}
+
+.um h2 {
+  margin-bottom: 20px;
+}
+
+.um h3 {
+  margin-bottom: 10px;
+}
+
+.um p {
+  margin-bottom: 30px;
+}
+
+.um img {
+  width: 100%;
+}
+/* TODO */
+
+/** Töflur **/
+
+.ferdir table {
+  text-align: left;
+  border-spacing: 0;
+  padding: 10px;
+}
+
+.ferdir th {
+  font-weight: 700;
+  padding: 10px;
+}
+
+.ferdir tbody tr:nth-child(odd){
+  background-color: #eebb99;
+}
+
+.ferdir section {
+  width: 100%;
+}
+
+/* TODO  */
+
+/** Form **/
+
+.skraning {
+  flex-direction: column;
+  align-items: center;
+}
+.skraning form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skraning legend {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.skraning fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 0;
+}
+
+.skraning fieldset p {
+  display: flex;
+  flex-direction: column;
+}
+
+.skraning input[type="text"],
+.skraning input[type="email"],
+.skraning input[type="tel"],
+.skraning input[type="number"],
+.skraning input[type="date"],
+.skraning select,
+.skraning textarea {
+  width: 100%;
+}
+
+.skraning fieldset .checkbox {
+  flex-direction: row;
+  gap: 10px;
+}
+
+.skraning fieldset .submit {
+  display: block;
+}
+
+/* TODO */
+
+.linkButton {
+  background-color: #996644;
+  font-size: 1rem;
+  color: #ffeedd;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  text-decoration: none;
+}
+

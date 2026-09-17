@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="is">
   <head>
+    <link rel="stylesheet" href="../styles.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Skoðaðu ferðirnar okkar." />
@@ -10,17 +11,17 @@
     <title>Ferðir</title>
   </head>
   <body>
+    <a class="sr-only" href="#efni">Beint í efni</a>
     <header>
       <h1>Ferðir</h1>
-      <p><a href="#efni">Beint í efni</a>.</p>
-      <nav>
-        <a href="/index.html">Forsíða</a>
-        <a href="/sidur/ferdir.html"><strong>Ferðir</strong></a>
-        <a href="/sidur/skraning.html">Bóka ferð</a>
-        <a href="/sidur/um.html">Um okkur</a>
-      </nav>
     </header>
-    <main id="efni">
+    <nav>
+      <a href="/index.html">Forsíða</a>
+      <a href="/sidur/ferdir.html"><strong>Ferðir</strong></a>
+      <a href="/sidur/skraning.html">Bóka ferð</a>
+      <a href="/sidur/um.html">Um okkur</a>
+    </nav>
+    <main id="efni" class="ferdir">
       <section>
         <table>
           <thead>
@@ -111,7 +112,7 @@
               <td>2 klst</td>
               <td>Auðveld</td>
               <td>Vetur</td>
-              <td>15400</td>
+              <td>15400 kr.</td>
             </tr>
             <tr>
               <td>Reykjavíkurrölt</td>
@@ -124,41 +125,49 @@
           </tbody>
         </table>
 
-        <p><a href="../index.html">Aftur á forsíðu</a>.</p>
+        <p><a href="../index.html">Aftur á forsíðu</a></p>
       </section>
     </main>
     <footer>
-      <section>
-        <h2>Opnunartímar</h2>
-        <h3>Skrifstofur</h3>
-        <p>Mánudaga til föstudaga: 12:00-18:00</p>
-        <p>Laugardagar: 14:00-16:00</p>
-        <p>Sunnudagar: Lokað</p>
-        <h3>Samfélagsmiðlar</h3>
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/HaskoliIslands/">Facebook</a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/haskoli_islands/">Instagram</a>
-          </li>
-          <li><a href="https://www.youtube.com/user/HIvarp">YouTube</a></li>
-        </ul>
-      </section>
-      <section>
-        <h2>Hafðu samband</h2>
-        <dl>
-          <dt>Ferðaþjónustufyrirtækið</dt>
-          <dd>Ferðagata 1</dd>
-          <dd>101 Reykjavík</dd>
-          <dd>Sími 234-2345</dd>
-          <dd>
-            <a href="mailto:ferdathjonustufyrirtaekid@example.org"
-              >ferdathjonustufyrirtaekid@example.org</a
-            >
-          </dd>
-        </dl>
-      </section>
+      <div class="footerContent">
+        <section>
+          <h2>Opnunartímar</h2>
+          <p>Mánudaga til föstudaga</p>
+          <p>12:00-18:00</p>
+          <p>Laugardagar</p>
+          <p>14:00-16:00</p>
+          <p>Sunnudagar</p>
+          <p>Lokað</p>
+        </section>
+        <section>
+          <h2>Hafðu samband</h2>
+          <dl>
+            <dt>Ferðaþjónustufyrirtækið</dt>
+            <dd>Ferðagata 1</dd>
+            <dd>101 Reykjavík</dd>
+            <dd>
+              <a href="tel:2342345">Sími 234-2345</a>
+            </dd>
+            <dd>
+              <a href="mailto:ferdathjonustufyrirtaekid@example.org"
+                >ferdathjonustufyrirtaekid@example.org</a
+              >
+            </dd>
+          </dl>
+        </section>
+        <section>
+          <h3>Samfélagsmiðlar</h3>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/HaskoliIslands/">Facebook</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/haskoli_islands/">Instagram</a>
+            </li>
+            <li><a href="https://www.youtube.com/user/HIvarp">YouTube</a></li>
+          </ul>
+        </section>
+      </div>
     </footer>
   </body>
 </html>
